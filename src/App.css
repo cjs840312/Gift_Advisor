@@ -1,3 +1,41 @@
 h1{
   text-align:center;
+  font-size: 50pt;
+  color:maroon;
+}
+
+button{
+  border-radius:8px;
+}
+
+
+.PickGiftButton{
+  height:20px; 
+  width:10%;
+  margin-top:50px;
+  margin-left:45%;
+}
+
+.FeatureForm{
+  width: 50%;
+  margin-left:25%;
+  margin-right:25%;
+  background-color:MistyRose ;
+}
+
+.ChoiceBar{
+  width:100%;
+}
+
+.FeatureName{
+  width:20%;
+  margin-left:0%;
+  float:left;
+  background-color:	Pink  ;
+}
+
+.FeatureList{
+  position:relative;
+  width:80%;
+  float:right;
 }

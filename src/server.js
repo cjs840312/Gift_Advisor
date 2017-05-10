@@ -6,7 +6,7 @@ server.listen(3000, function () {
 });
 
 server.get('/', (req, res) => {
-  res.sendFile(__dirname+"/view.html");
+  res.sendFile(__dirname+"/HomePage.html");
 });
 
 server.get('/bundle.js', (req, res) => {
