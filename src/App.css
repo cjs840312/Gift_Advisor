@@ -10,16 +10,16 @@ button{
 
 .PickGiftButton{
   position:relative;
-  height:20px; 
-  width:10%;
-  top:50px;
+  height:40px; 
+  width:auto;
+  top:20px;
   left:45%;
 }
 
 .FeatureForm{
   position:relative;
   width: 50%;
-  left:25%;
+  margin:0 auto;
   background-color:MistyRose ;
 }
 
@@ -32,16 +32,31 @@ button{
 }
 
 .FeatureName{
-  width:19%;
+  position:relative;
+  width:20%;  
   height:25px;
   float:left;
-  margin-left:1%;
   text-align:center;
-  background-color:	Pink;
 }
 
 .FeatureList{
   position:relative;
   width:80%;
   float:right;
+  text-Align:center;
+  background-color:pink;
+}
+
+.AdviceBlock{
+  position:relative;
+  width: 80%;
+  left:10%;
+  text-align : center;
+}
+.AdviceBlock img{
+  margin-top:10px
+}
+
+.AdviceBlock div{
+  margin-top:10px
 }
