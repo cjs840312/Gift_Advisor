@@ -57,7 +57,7 @@ class FeatureForm extends Component {
 	    super(props);
         this.state = {feature:[
 			{ Name:"Holliday",Choice:["Mother's Day","Father's Day","Valentine's Day"],idx:0},
-			{ Name:'Type',Choice:["HandMake","Resturant","Shopping"],idx:0}
+			{ Name:'Type',Choice:["HandMake","Restaurant","Shopping"],idx:0}
 		]};
 	}
 
@@ -152,7 +152,7 @@ class Advice extends Component{
 				<div className={styles.AdviceBlock}>
 					<form>
 						<div> {this.props.name} </div>
-						<img src={this.props.img}/>
+						<img src={this.props.img} style={{maxWidth:'50%'}}/>
 						<div> <a href={this.props.link}> link </a> </div>
 					</form>
 				</div>
