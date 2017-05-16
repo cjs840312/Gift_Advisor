@@ -8,17 +8,23 @@ class App extends Component {
         this.state = {Requisite:{},Advice:{Name:'',img:'',link:''},Mode:'Advice'};
 	}
 
-	pushRequisite(){
-		console.log(this.state.Requisite[0])	
-		console.log(this.state.Requisite[1])
-		this.setState({Advice:{
-			Name:'HandMake Rose',
-			img:'http://www.zhidiy.com/uploadfile/201304/17/04155586.jpg',
-			link:'http://www.zhidiy.com/zhimeigui/5529.html'
-		}})
-	}
 	getAdvice(){
-		this.pushRequisite()
+		console.log(JSON.stringify(this.state.Requisite))
+
+		fetch('/Advice', {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(this.state.Requisite)
+		})
+		.then(function(res){return res.json()})
+		.then(json=>{
+			console.log(typeof(json))
+			console.log(json)
+			this.setState({Advice:json})
+		})
 	}
 
 	returnFeature(requisite){
@@ -34,10 +40,10 @@ class App extends Component {
 					<button className={styles.PickGiftButton} onClick={this.getAdvice.bind(this)}> Pick a Gift </button>
 				</div>
 				{
-					this.state.Advice.img !== '' ? 
+					this.state.Advice.Name !== '' ? 
 					<Advice name={this.state.Advice.Name} img={this.state.Advice.img} link={this.state.Advice.link}/>
 					: null
-					}
+					
 				}
 			</div>
 		);
